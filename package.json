@@ -1,5 +1,5 @@
 {
-  "name": "stylint",
+  "name": "stylint-slevomat",
   "version": "1.5.9",
   "description": "A linter for stylus",
   "author": "Ross Patton",
@@ -25,10 +25,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/SimenB/stylint"
+    "url": "https://github.com/slevomat/stylint"
   },
   "bugs": {
-    "url": "https://github.com/SimenB/stylint/issues"
+    "url": "https://github.com/slevomat/stylint/issues"
   },
   "bin": {
     "stylint": "./bin/stylint"
