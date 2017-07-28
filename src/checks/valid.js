@@ -7,6 +7,7 @@
 // 5 ( from || to ) are only valid inside @keyframe
 // 6 the actual JSON property whitelist we will test against
 // 7 if interpolated value just give it a pass
+// 8 if it's pure data attribute selector like "[data-icon]"
 var attrOrMixinRe = /^\[\S+\]|({[\S]+})|(\([\S ]+\))|(\(\))/ // 1
 var stripRe = /(?=\S)\[\S+\]|(\.|#)(\w|-)+/ // /(?=\S)\[\S+\]/ // 2
 var ignoreRe = /^[$.#]|[&=>+~]|if|for|else|return|@block|calc|@extend|@media/ // 3
@@ -14,7 +15,7 @@ var numRe = /\d+?(?=px|%|em|rem|v(h|w)|v(min|max)|ex|ch|mm|cm|in|pt|pc|mozmm)/ /
 var keyRe = /((from)|(to))+(?= $| {| \d|\n|{)/ // 5
 var validJSON = require( '../data/valid.json' ) // 6
 var interpolatedRe = /( *{\S+} *)/ // 7
-
+var dataAttributeRe = /^\[data-[a-zA-Z0-9\-]+\]$/ // 8
 
 /**
 * @description check against a JSON of all valid css properties and values
@@ -42,7 +43,8 @@ module.exports = function valid( line ) {
 		interpolatedRe.test( this.cache.origLine ) ||
 		ignoreRe.test( line.trim() ) || // 2
 		attrOrMixinRe.test( line ) || // 3
-		numRe.test( arr[0] ) ) { // 3
+		numRe.test( arr[0] ) // 3
+		dataAttributeRe.test( arr[0] ) ) { // 8
 		isValid = true
 	}
 
