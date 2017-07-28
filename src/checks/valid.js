@@ -43,7 +43,7 @@ module.exports = function valid( line ) {
 		interpolatedRe.test( this.cache.origLine ) ||
 		ignoreRe.test( line.trim() ) || // 2
 		attrOrMixinRe.test( line ) || // 3
-		numRe.test( arr[0] ) // 3
+		numRe.test( arr[0] ) || // 3
 		dataAttributeRe.test( arr[0] ) ) { // 8
 		isValid = true
 	}
