@@ -22,7 +22,7 @@ var init = function( options, pathPassed ) {
 
 	// if you want to use transparent mixins, pass in an array of them
 	// this also covers the (more common probably) custom property use case
-	this.cache.customProperties = this.config.mixins || this.config.customProperties || this.cache.customProperties
+	this.cache.customProperties = this.config.mixins.concat(this.config.customProperties)
 
 	// we do the check here just in case
 	// they don't pass in a reporter when using a custom config
