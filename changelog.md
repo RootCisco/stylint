@@ -1,3 +1,15 @@
+### 1.6.5
+
+Add: done()で最後にnode.jsのプログラムを終了させるかどうかのフラグをオプションに追加。
+
+Refactor: dep updated.
+
+.
+
+.
+
+.
+
 ### 1.5.9
 
 remove unused entry `dir` from `cache`
