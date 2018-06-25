@@ -27,7 +27,7 @@ var Stylint = function( path, config, callback ) {
 		require( './src/core/' ),
 		require( './src/checks/' ),
 		require( './src/state/' ),
-		stampit().enclose( function() {
+		stampit().init( function() {
 			var pkg = null
 			try {
 				pkg = require( process.cwd() + '/package.json' )
