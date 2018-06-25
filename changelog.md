@@ -1,5 +1,9 @@
 ### 1.6.5
 
+Fix: stampit().encloseがエラーしていたので修正。
+
+### 1.6.5
+
 Add: done()で最後にnode.jsのプログラムを終了させるかどうかのフラグをオプションに追加。
 
 Refactor: dep updated.

@@ -70,7 +70,7 @@ var Stylint = function( path, config, callback ) {
 
 			this.customConfig = typeof config === 'object' ? config : false
 			this.callback = callback || function() {}
-		} ).enclose( require( './src/core/init' ) )
+		} ).init( require( './src/core/init' ) )
 	)
 }
 
