@@ -18,6 +18,11 @@ var defaultOptions = {
 var init = function( options, pathPassed ) {
 	options = defaults( options || {}, defaultOptions )
 
+	// process.exit() don't let it run
+	if ( options.processExit ) {
+		this.state.processExit = true
+	}
+
 	this.config = this.setConfig( options.config )
 
 	// if you want to use transparent mixins, pass in an array of them
