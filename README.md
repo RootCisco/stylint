@@ -1,4 +1,4 @@
-## stylus-lint - 既存のstylintを少し変更した。
+## stylus-linter - 既存のstylintを少し変更した。
 
 **[変更点]**
 - 内部モジュールをアップデート。
