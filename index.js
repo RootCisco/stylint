@@ -27,7 +27,7 @@ var Stylint = function( path, config, callback ) {
 		require( './src/core/' ),
 		require( './src/checks/' ),
 		require( './src/state/' ),
-		stampit().init( function() {
+		stampit().enclose( function() {
 			var pkg = null
 			try {
 				pkg = require( process.cwd() + '/package.json' )
@@ -70,7 +70,7 @@ var Stylint = function( path, config, callback ) {
 
 			this.customConfig = typeof config === 'object' ? config : false
 			this.callback = callback || function() {}
-		} ).init( require( './src/core/init' ) )
+		} ).enclose( require( './src/core/init' ) )
 	)
 }
 

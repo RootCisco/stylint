@@ -1,6 +1,6 @@
 {
   "name": "stylus-linter",
-  "version": "1.6.6",
+  "version": "1.6.7",
   "description": "A linter for stylus, stylint customize",
   "author": "Ross Patton",
   "license": "GPL-3.0",
@@ -50,7 +50,7 @@
     "glob": "7.1.2",
     "lodash.defaults": "4.2.0",
     "path-is-absolute": "1.0.1",
-    "stampit": "4.1.2",
+    "stampit": "^1.2.0",
     "strip-json-comments": "2.0.1",
     "user-home": "2.0.0",
     "yargs": "11.0.0"
